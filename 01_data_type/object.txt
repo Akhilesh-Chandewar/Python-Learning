@@ -1,0 +1,7 @@
+Object {
+    Identity 
+    Type
+    Value 
+}
+
+Always check with Identity if Object is mutable or immutable
