@@ -1,0 +1,29 @@
+1. / → Division (returns float)
+
+Always gives the result as a floating-point (decimal) number, even if both numbers divide evenly.
+
+print(10 / 3)   # 3.333...
+print(10 / 2)   # 5.0   (not 5, notice the .0)
+
+2. // → Floor Division (integer division)
+
+Divides, then rounds down (floors) the result to the nearest integer.
+
+If numbers are integers, you get an integer.
+
+Works with negatives too (important difference!).
+
+print(10 // 3)   # 3
+print(10 // 2)   # 5
+print(-10 // 3)  # -4 (because floor of -3.333... is -4, not -3)
+
+3. % → Modulo (remainder)
+
+Gives the remainder after division.
+
+Works with both positive and negative numbers, but sign follows the divisor.
+
+print(10 % 3)    # 1  (because 3*3=9, remainder = 1)
+print(10 % 2)    # 0
+print(-10 % 3)   # 2  (because -10 = (-4 * 3) + 2)
+print(10 % -3)   # -2 (because 10 = (-3 * -4) + -2)
