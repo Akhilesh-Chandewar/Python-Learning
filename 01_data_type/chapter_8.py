@@ -37,3 +37,19 @@ sugar_level = [1,2,3,4,5]
 print(f"Total sugar level {sum(sugar_level)}")
 print(f"Minimum sugar level {min(sugar_level)}")
 print(f"Maximum sugar level {max(sugar_level)}")
+
+base_liquid = ["water" , "milk"]
+extra_flavour = ["ginger" , "cinnamon"]
+
+# operator overloading
+full_liquid_mix = base_liquid + extra_flavour 
+print(f"full liquid mix {full_liquid_mix}")
+
+strong_brew = ["tea leves" , "ginger"] * 3
+print(f"strong brew {strong_brew}")
+
+raw_spices = bytearray(b"CINNAMON")
+print(f"raw spices {raw_spices}")
+
+raw_spices = raw_spices.replace(b"CINNA", b"CARDA")
+print(f"raw spices {raw_spices}")
