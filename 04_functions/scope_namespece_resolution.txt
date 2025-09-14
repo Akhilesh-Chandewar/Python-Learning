@@ -1,0 +1,7 @@
+Local - inside function
+
+Enclosing from outer fuction if nested
+
+Global - top level scope
+
+built-in
