@@ -3,7 +3,7 @@ try:
     if people <= 0:
         raise ValueError("Number of people must be greater than 0.")
 
-    names = []
+    names: list[str] = []
     for i in range(people):
         name = input(f"Enter name of person {i+1}: ").strip()
         if not name:
