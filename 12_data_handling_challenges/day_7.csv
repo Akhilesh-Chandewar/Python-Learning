@@ -1,0 +1,21 @@
+id,name,email,location,is_active
+1,Alice Johnson,alice.johnson@example.com,New York,True
+2,Bob Smith,bob.smith@example.com,Los Angeles,False
+3,Charlie Brown,charlie.brown@example.com,Chicago,True
+4,Diana Prince,diana.prince@example.com,San Francisco,True
+5,Ethan Hunt,ethan.hunt@example.com,Boston,False
+6,Fiona Gallagher,fiona.gallagher@example.com,Miami,True
+7,George Martin,george.martin@example.com,Seattle,True
+8,Hannah Baker,hannah.baker@example.com,Austin,False
+9,Ian Curtis,ian.curtis@example.com,Denver,True
+10,Julia Roberts,julia.roberts@example.com,Las Vegas,True
+11,Kevin Spacey,kevin.spacey@example.com,San Diego,False
+12,Laura Palmer,laura.palmer@example.com,Portland,True
+13,Michael Scott,michael.scott@example.com,Scranton,True
+14,Nina Simone,nina.simone@example.com,Philadelphia,False
+15,Oscar Wilde,oscar.wilde@example.com,New Orleans,True
+16,Pam Beesly,pam.beesly@example.com,Austin,True
+17,Quentin Tarantino,quentin.tarantino@example.com,Los Angeles,True
+18,Rachel Green,rachel.green@example.com,New York,False
+19,Steve Rogers,steve.rogers@example.com,Brooklyn,True
+20,Tina Fey,tina.fey@example.com,Chicago,True
