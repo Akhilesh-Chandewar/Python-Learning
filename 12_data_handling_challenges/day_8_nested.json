@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "is_active": true,
+        "location": {
+            "city": "New York",
+            "state": "NY",
+            "country": "USA",
+            "coordinates": {
+                "lat": 40.7128,
+                "lng": -74.0060
+            }
+        },
+        "roles": [
+            "admin",
+            "editor"
+        ],
+        "company": {
+            "name": "TechCorp",
+            "department": "Engineering",
+            "manager": {
+                "name": "Robert Smith",
+                "email": "robert.smith@techcorp.com"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "name": "Bob Williams",
+        "email": "bob.williams@example.com",
+        "is_active": false,
+        "location": {
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "USA",
+            "coordinates": {
+                "lat": 37.7749,
+                "lng": -122.4194
+            }
+        },
+        "roles": [
+            "viewer"
+        ],
+        "company": {
+            "name": "DesignStudio",
+            "department": "Creative",
+            "manager": {
+                "name": "Emily Clark",
+                "email": "emily.clark@designstudio.com"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "name": "Carol Martinez",
+        "email": "carol.martinez@example.com",
+        "is_active": true,
+        "location": {
+            "city": "London",
+            "state": "",
+            "country": "UK",
+            "coordinates": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            }
+        },
+        "roles": [
+            "editor",
+            "viewer"
+        ],
+        "company": {
+            "name": "GlobalSolutions",
+            "department": "Marketing",
+            "manager": {
+                "name": "James Lee",
+                "email": "james.lee@globalsolutions.com"
+            }
+        }
+    }
+]

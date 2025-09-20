@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "is_active": true,
+        "location.city": "New York",
+        "location.state": "NY",
+        "location.country": "USA",
+        "location.coordinates.lat": 40.7128,
+        "location.coordinates.lng": -74.006,
+        "roles[0]": "admin",
+        "roles[1]": "editor",
+        "company.name": "TechCorp",
+        "company.department": "Engineering",
+        "company.manager.name": "Robert Smith",
+        "company.manager.email": "robert.smith@techcorp.com"
+    },
+    {
+        "id": 2,
+        "name": "Bob Williams",
+        "email": "bob.williams@example.com",
+        "is_active": false,
+        "location.city": "San Francisco",
+        "location.state": "CA",
+        "location.country": "USA",
+        "location.coordinates.lat": 37.7749,
+        "location.coordinates.lng": -122.4194,
+        "roles[0]": "viewer",
+        "company.name": "DesignStudio",
+        "company.department": "Creative",
+        "company.manager.name": "Emily Clark",
+        "company.manager.email": "emily.clark@designstudio.com"
+    },
+    {
+        "id": 3,
+        "name": "Carol Martinez",
+        "email": "carol.martinez@example.com",
+        "is_active": true,
+        "location.city": "London",
+        "location.state": "",
+        "location.country": "UK",
+        "location.coordinates.lat": 51.5074,
+        "location.coordinates.lng": -0.1278,
+        "roles[0]": "editor",
+        "roles[1]": "viewer",
+        "company.name": "GlobalSolutions",
+        "company.department": "Marketing",
+        "company.manager.name": "James Lee",
+        "company.manager.email": "james.lee@globalsolutions.com"
+    }
+]
