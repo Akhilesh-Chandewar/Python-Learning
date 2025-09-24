@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Shortner</title>
+    <title>URL Shortener</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Welcome to url shortner</h1>
-    <p>We are working on it</p>
+
+<body class="bg-light">
+
+    <div class="container py-5">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-primary">🔗 URL Shortener</h1>
+            <p class="lead text-muted">Easily shorten, share, and track your links.</p>
+        </div>
+
+        <!-- Form -->
+        <div class="card shadow-sm mb-5">
+            <div class="card-body">
+                <form method="POST" class="row g-3">
+                    <div class="col-md-9">
+                        <input type="url" class="form-control" name="url" placeholder="Enter your URL here" required>
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button type="submit" class="btn btn-primary">Shorten</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">📋 All Shortened URLs</h5>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0 align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Original URL</th>
+                            <th scope="col">Short URL</th>
+                            <th scope="col">Visits</th>
+                            <th scope="col" class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for url in urls %}
+                        <tr>
+                            <td
+                                style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <a href="{{ url[0] }}" target="_blank">{{ url[0] }}</a>
+                            </td>
+                            <td>
+                                <a href="/{{ url[1] }}" target="_blank">{{ request.host_url }}{{ url[1] }}</a>
+                            </td>
+                            <td>{{ url[2] }}</td>
+                            <td class="text-center">
+                                <form action="/delete/{{ url[1] }}" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center text-muted py-4">No URLs yet. Add one above!</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

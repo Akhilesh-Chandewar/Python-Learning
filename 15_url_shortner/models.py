@@ -2,7 +2,6 @@ import sqlite3
 
 DB_NAME = "database.db"
 
-
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
         conn.execute(
@@ -18,7 +17,6 @@ def init_db():
         conn.commit()
     print("Database initialized")
 
-
 def insert_url(original_url, short_code):
     with sqlite3.connect(DB_NAME) as conn:
         conn.execute(
@@ -29,8 +27,6 @@ def insert_url(original_url, short_code):
             (original_url, short_code),
         )
         conn.commit()
-    print("URL inserted")
-
 
 def get_original_url(short_code):
     with sqlite3.connect(DB_NAME) as conn:
@@ -43,8 +39,7 @@ def get_original_url(short_code):
             (short_code,),
         )
         result = cursor.fetchone()
-    return result[0] if result else None  # return string or None
-
+    return result[0] if result else None
 
 def increment_visit_count(short_code):
     with sqlite3.connect(DB_NAME) as conn:
@@ -57,15 +52,13 @@ def increment_visit_count(short_code):
             (short_code,),
         )
         conn.commit()
-    print("Visit count incremented")
-    return
 
 def get_all_urls():
     with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.execute(
             """
             SELECT original_url, short_code, visit_count
-            FROM url ORDER by id DESC
+            FROM url ORDER BY id DESC
             """
         )
         result = cursor.fetchall()
@@ -81,4 +74,3 @@ def delete_url(short_code):
             (short_code,),
         )
         conn.commit()
-    print("URL deleted")
