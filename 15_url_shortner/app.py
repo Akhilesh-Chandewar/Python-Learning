@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import Flask, redirect, render_template, request
+import random
+import string
 from models import (
     init_db,
     get_all_urls,
@@ -10,10 +12,20 @@ from models import (
 
 app = Flask(__name__)
 
+init_db()
 
-@app.route("/")
-def hello_world():
-    return "Hello, World!"
+def generate_short_code(length = 6):
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
+
+@app.route("/" , methods=["GET" , "POST"])
+def index():
+    if request.method == "POST":
+        original_url = request.form["url"]
+        short_code = generate_short_code()
+        insert_url(original_url, short_code)
+        return redirect("/")
+    urls = get_all_urls()
+    return render_template("index.html", urls=urls)
 
 
 if __name__ == "__main__":
