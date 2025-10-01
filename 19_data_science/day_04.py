@@ -16,7 +16,7 @@ model = LinearRegression()
 model.fit(X, y)
 
 # Streamlit UI
-st.title("Simple Linear Regression: Salary Prediction")
+st.title("📈 Simple Linear Regression: Salary Prediction")
 st.write("Enter years of experience to predict salary:")
 
 years_input = st.number_input(
@@ -25,10 +25,20 @@ years_input = st.number_input(
 
 # Make prediction
 if years_input is not None:
-    # Convert to 2D numpy array to avoid type errors
     X_new = np.array([[years_input]])
     prediction = model.predict(X_new)[0]
-
-    st.write(
+    st.success(
         f"💡 Predicted Salary for {years_input} years of experience: **{prediction:,.2f}**"
     )
+
+# Plotting
+st.subheader("Salary vs. Years of Experience")
+
+fig, ax = plt.subplots()
+ax.scatter(X, y, color="blue", label="Data points")
+ax.plot(X, model.predict(X), color="red", linewidth=2, label="Regression line")
+ax.set_xlabel("Years of Experience")
+ax.set_ylabel("Salary")
+ax.legend()
+
+st.pyplot(fig)
