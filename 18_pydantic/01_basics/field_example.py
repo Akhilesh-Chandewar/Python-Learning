@@ -12,3 +12,13 @@ class BlogPost(BaseModel):
     title: str
     content: str
     img_url: Optional[str] = None
+
+cart_data = {
+    "user_id": 1,
+    "items": ["apple", "banana", "orange"],
+    "quantities": {"apple": 2, "banana": 3, "orange": 1},
+    "total_price": 15.75    
+}
+
+cart = Cart(**cart_data)
+print(cart)
